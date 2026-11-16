@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">Oaster wordmark</title>
+  <desc id="desc">Oaster wordmark with geometric capsule logomark.</desc>
+  <defs>
+    <linearGradient id="glass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7AB4FF"/>
+      <stop offset="55%" stop-color="#2F6BFF"/>
+      <stop offset="100%" stop-color="#1E3FAE"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="15%" y1="10%" x2="85%" y2="90%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85"/>
+      <stop offset="45%" stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(40,40)">
+    <rect x="0" y="24" width="240" height="192" rx="96" fill="url(#glass)"/>
+    <rect x="14" y="38" width="212" height="164" rx="82" fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="8"/>
+    <rect x="0" y="24" width="240" height="192" rx="96" fill="url(#shine)"/>
+    <path d="M72 120c12-20 24-20 36 0s24 20 36 0 24-20 36 0" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g fill="#12151A" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="600" font-size="168" letter-spacing="2">
+    <text x="320" y="210">Oaster</text>
+  </g>
+</svg>

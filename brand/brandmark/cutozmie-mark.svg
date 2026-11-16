@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Cutozmie brand mark</title>
+  <desc id="desc">A geometric C-shaped mark with a precision cut, representing the Cutozmie brand.</desc>
+  <defs>
+    <linearGradient id="cmark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12151A"/>
+      <stop offset="100%" stop-color="#2F3A4A"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="#F3F5F7"/>
+  <path d="M356 132a140 140 0 1 0 0 248l-42-42a80 80 0 1 1 0-164l42-42z" fill="url(#cmark)"/>
+  <rect x="286" y="236" width="120" height="40" rx="20" fill="#2F6BFF"/>
+  <circle cx="406" cy="256" r="20" fill="#2F6BFF"/>
+</svg>

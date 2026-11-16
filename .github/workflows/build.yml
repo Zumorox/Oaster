@@ -1,0 +1,71 @@
+name: Build
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+jobs:
+  android:
+    name: Android (debug and release artifacts)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Build debug APK
+        run: ./gradlew :androidApp:assembleDebug --stacktrace
+        # Requires project scaffold and Gradle wrapper
+
+      - name: Build release bundle/APK
+        run: ./gradlew :androidApp:assembleRelease :androidApp:bundleRelease --stacktrace
+        # Configure signing secrets for release publishing
+
+      - name: Upload Android artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-builds
+          path: |
+            androidApp/build/outputs/apk/**/*.apk
+            androidApp/build/outputs/bundle/**/*.aab
+          if-no-files-found: warn
+
+  windows-desktop:
+    name: Windows desktop package
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Package desktop distribution
+        run: ./gradlew :desktopApp:packageDistributionForCurrentOS --stacktrace
+        # Adjust task name to configured Compose Desktop packaging (e.g. packageMsi/packageExe)
+
+      - name: Upload desktop artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-desktop
+          path: |
+            desktopApp/build/compose/binaries/**
+          if-no-files-found: warn
