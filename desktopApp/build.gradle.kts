@@ -28,7 +28,7 @@ compose.desktop {
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "Oaster"
-            packageVersion = "0.1.0"
+            packageVersion = "1.0.0"
             description = "Oaster by Cutozmie"
             vendor = "Cutozmie"
             windows {
