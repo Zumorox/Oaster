@@ -22,12 +22,6 @@ kotlin {
                 implementation(compose.material3)
                 implementation(compose.ui)
                 implementation(compose.components.resources)
-                implementation(compose.components.uiToolingPreview)
-            }
-        }
-        val androidMain by getting {
-            dependencies {
-                implementation(compose.preview)
             }
         }
         val desktopMain by getting {

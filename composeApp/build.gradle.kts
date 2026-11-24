@@ -28,17 +28,11 @@ kotlin {
                 implementation(compose.material3)
                 implementation(compose.ui)
                 implementation(compose.components.resources)
-                implementation(compose.components.uiToolingPreview)
-                implementation(libs.androidx.lifecycle.viewmodel)
-                implementation(libs.androidx.lifecycle.runtime.compose)
                 implementation(libs.kotlinx.coroutines.core)
-                implementation(libs.koin.core)
-                implementation(libs.koin.compose)
             }
         }
         val androidMain by getting {
             dependencies {
-                implementation(compose.preview)
                 implementation(libs.androidx.activity.compose)
             }
         }

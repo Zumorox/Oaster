@@ -2,6 +2,7 @@ package com.cutozmie.oaster.core.designsystem
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Typography
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
@@ -36,7 +37,7 @@ fun OasterTheme(
 ) {
     MaterialTheme(
         colorScheme = if (darkTheme) OasterDarkColors else OasterLightColors,
-        typography = MaterialTheme.typography,
+        typography = Typography(),
         content = content
     )
 }
